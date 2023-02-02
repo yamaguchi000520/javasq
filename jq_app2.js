@@ -7,7 +7,12 @@
 
 
 $(function(){
-  $('.box1').hide();
+  $('.box1').mouseover(function(){
+    $('.box1').css({'background-color':'#0000ff'});
+  })
+
+
+  // $('.box1').hide();
 
   // $('.box1').show();
   // $('.box1').css({'background-color':'#0000ff'});
