@@ -30,3 +30,16 @@ const last = alphabet.pop();
 console.log(last);
 console.log(alphabet);
 
+//特定の要素が配列に含まれているか調べる
+const fruits = [ 'りんご', 'バナナ', 'みかん' ]
+const check1 =fruits.includes('りんご');
+console.log(check1);
+
+//配列要素の結合と文字列の分割
+const interests3 = ['読書', '料理', 'キャンプ']
+const a = interests3.join('と');
+console.log(a);
+
+const string = '読書&料理&キャンプ';
+const b = string.split('&'); // splitは指定した単語を抜き出す働き
+console.log(b);
