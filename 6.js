@@ -54,3 +54,34 @@ if (age3 >= 20 && age3 <= 29){
 if (age3 <= 10 || age3 >= 60){
   console.log('Jr.またはシニア');
 }
+
+//三項演算子
+const size = 20;
+let result;
+//今までの方法
+if (size >= 30){
+  result = '粗大ゴミ';
+} else {
+  result = '不燃ごみ';
+}
+//三項演算子
+const result2 = (size >= 30) ? '粗大ゴミ' : '不燃ごみ';
+//２つ以上の条件があるときは通常のif文を用いると読みやすい
+
+
+//switch文
+const ranking = 2;
+switch (ranking) {
+  case 1:
+    console.log('金メダル');
+    break;
+  case 2:
+    console.log('銀メダル');
+    break;
+  case 3:
+    console.log('銅メダル');
+    break;
+  default:
+    console.log('メダルなし');
+}
+//breakを記述しなくてもプログラムは実行されるが、処理が終わらず、つぎのcaseまで処理が続いてしまう。
