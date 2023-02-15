@@ -11,8 +11,48 @@
   <!--DOMの役割はボタンを押したら、デザインが変わる-->
   <!--ページをスクロールすると、途中で広告バナーが表示される-->
   <!--入力フォームで、内容を間違えると「正しく入力してください」とエラーが出る-->
-  <div id="sample">オリジナルのテキストです</div>
+  <1>
+    <div id="sample">オリジナルのテキストです</div>
+  </1>
 
+  <!--要素を探す-->
+  <2>
+    <div class="sample">class属性sample1個目</div>
+    <div class="sample">class属性sample2個目</div>
+    <div class="sample">class属性sample3個目</div>
+  </2>
+
+  <!--要素を変更する -->
+  <3>
+    <!--テキストを変更する-->
+    <p>テキストです。</p>
+
+    <!--要素の属性を変更する-->
+    <img src="sample.jpg" width="200" height="200"></img>
+
+    <!--カスタムデータ属性-->
+    <div class="profile" data-id="100" data-user-name="zaru">zaru</div>
+
+    <!--カスタムデータの活用-->
+    <div>
+      <p class="score" data-score="100">100点です</p>
+    </div>
+  </3>
+
+
+  <4><!-- CSSを変更する-->
+
+    <p class="change">テキストです</p>
+
+    <!--要素を追加する　-->
+    <div class="content">
+      <p>最初にある要素</p>
+
+      指定要素の前後に要素を追加する
+      <p class="first">最初からある要素</p>
+    </div>
+
+  </4>
 
 </body>
 </html>
