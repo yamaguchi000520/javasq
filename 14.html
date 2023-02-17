@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <2>
+      <button type="button">ボタン</button>
+      <script>
+        function alertMessage(){
+          alert('ボタンとクリックしました');
+        }
+        const button = document.querySelector('button');
+        button.addEventListener('click', alertMessage);
+        // addEventListenerを使用すると、特定のイベントが発生した時に任意の関数を実行させることができる
+
+        //関数を渡す方法
+        // const button = document.querySerySelector('button');
+        // cutton.addEventListener('click', function(){
+        //   alert('ボタンをクリックしました');
+        // });
+
+        // イベントの削除
+        function event(){
+          console.log('関数名が特定できるので削除可能')
+        }
+        button.addEventListener('click', event);
+        button.removeEventListener('click', event);
+      </script>
+    </2>
+    <3>
+      <!--様々なイベント-->
+      <!--MDNのイベントリファレンスページを参照  https://develope.mozilla.org/ja/docs/Web/Events-->
+
+      <!--clickイベント-->
+      <button type='button'>ボタン</button>
+      <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', function (){
+          console.log('クリックしました');
+        });
+      </script>
+
+      <!--inputイベント-->
+      <input type="text">
+      <script>
+        const input = document.querySelector('input');
+        input.addEventListener('input', function(event){
+          const value = event.currentTarget.value;
+          console.log(`入力内容: ${value}`);
+        });
+      </script>
+      <div>
+        <input type="radio" name="radio" value="1" class="radio">1
+        <input type="radio" name="radio" value="2" class="radio">2
+        <script>
+          const radios = document.querySelectorAll('.radio');
+          for (let radio of radios) {
+            radio.addEventListener('inpt', function(event){
+              const value = event.currentTarget.vulue;
+              console.log(`${value}がチェックされました`);
+            });
+          }
+        </script>
+      </div>
+      <div>
+      <!--//keydown/keyup-->
+        <input type="text">
+        <script>
+          const input = document.querySelector('input');
+          input.addEventListener('keydown', function(event){
+            console.log(event.key);
+          });
+        </script>
+      </div>
+
+      <div>
+        <!--mousemove/mousedown/mouseup-->
+        <div style="width: 200px; height: 100; background: pink;"></div>
+        <script>
+          const div = document.querySelector('div');
+          div.addEventListener('mousemove', function (event){
+            console.log(`Move: x = ${event.offset}, y = ${event.offsetY}`);
+          });
+          div.addEventListener('mousedown', function (event){
+            console.log(`Down: x = ${event.offset}, y = ${event.offsetY}`);
+          });
+          div.addEventListener('mouseup', function (event){
+            console.log(`UP: x = ${event.offset}, y = ${event.offsetY}`);
+          });
+          </script>
+      </div>
+    </3>
+  </body>
+</html>
