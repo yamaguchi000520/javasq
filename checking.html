@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="checking.css" />
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ver=1.11.3'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0bfa6bb92b.js" crossorigin="anonymous"></script>
+    <title>入力チェック</title>
+  </head>
+  <body>
+    <script src="checking.js"></script>
+    <div class="container mt-5">
+
+      <div class="row">
+        <div class="col-3">テキストボックス</div>
+        <div class="col-8">
+          <input type="text" class="textbox" id="textbox" name="textbox" value="">
+          <div class="err_text" id="err_textbox"></div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-3">セレクトボックス</div>
+        <div class="col-8">
+          <label class="select_label">
+            <select class="input_category" id="list_id" name="list_id">
+              <option value="">リストを選択してください</option>
+              <option value="1">すし</option>
+              <option value="2">ラーメン</option>
+              <option value="3">つるむらさきのおひたし</option>
+            </select>
+          </label>
+          <div class="err_text" id="err_category"></div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-3">ラジオボタン</div>
+        <div class="col-8">
+          <input type="radio" id="radio_item1" class="radio_item" name="radio_item" value="1">
+          <label for="radio_item1" class="select_radio">
+          	<span>ボタン1</span>
+          </label>
+          <input type="radio" id="radio_item2" class="radio_item" name="radio_item" value="2">
+          <label for="radio_item2" class="select_radio">
+          	<span>ボタン2</span>
+	      	</label>
+          <div class="err_text" id="err_category"></div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-3">チェックボックス</div>
+        <div class="col-8">
+          <input type="checkbox" id="checkbox1" name="checkbox" value="1">
+          <label for="checkbox1" class="select_check">
+          	<span>チェックボックス1</span>
+          </label>
+          <input type="checkbox" id="checkbox2" name="checkbox" value="2">
+          <label for="checkbox2" class="select_check">
+          	<span>チェックボックス2</span>
+          </label>
+          <div class="err_text" id="err_category"></div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-3">テキストエリア</div>
+        <div class="col-8">
+          <textarea class="input_textarea" id="textarea" name="textarea" placeholder="テキストエリア（1000文字以内）" style="overflow: hidden; overflow-wrap: break-word; height: 150px;"></textarea>
+          <div class="err_text" id="err_category"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
